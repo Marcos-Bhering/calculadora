@@ -1,0 +1,93 @@
+'''Exercícios:
+01 - Escreva um programa em que sejam lidos dois números reais, X e Y, e sejam feitas
+chamadas a funções descritas abaixo, que deverão ser implementadas. No escopo global
+deve ser impresso o resultado retornado por estas funções.
+a) Uma função que receba X e Y como entrada e retorne o maior deles;
+b) Uma função que receba X e Y como entrada e retorne a média aritmética deles;
+02 - Escreva uma função de potenciação, em que os dados de entrada são: base e
+expoente (inteiros).
+03 - Crie uma calculadora que consiga executar as funções destacadas da calculadora
+padrão do windows 10 '''
+
+
+
+ 
+'''criar um função (adição, subtração, divisão, multiplicaçao)
+depois acrescentar o reto da calculadora
+
+'''
+print("Qual o calculo que você deseja? ")
+
+numero1 = 0
+numero2 = 0
+
+def calculadora(operaçao, numero1, numero2):
+    if operaçao == 'adiçao':
+     return numero1 + numero2
+
+    elif operaçao == 'subtraçao':
+       return numero1 - numero2
+    
+    elif operaçao == 'multiplicaçao':
+       return numero1 * numero2
+    
+    elif operaçao == 'divisao':
+       return numero1 / numero2
+    
+while True:
+   print("selecione a operação desejada.")
+   print('1 - soma')
+   print('2 - subtrair')    
+   print('3 - multiplicar')
+   print('4 - dividir')
+   print('0 - sair')
+
+
+   opçao = int(input('diga qual operação voce deseja! '))
+                    
+   if opçao == 0:
+    print("Encerrando a calculadora.")
+    break
+
+    numero1 = float(input("qual é o primeiro valor? "))
+    numero2 = float(input("qual é o segundo valor? "))
+   
+   elif opçao == 1:
+    numero1 = float(input("qual é o primeiro valor? "))
+    numero2 = float(input("qual é o segundo valor? "))
+    resultado_adiçao = calculadora('adiçao', numero1, numero2)
+    print(f"O resultado da soma é: {resultado_adiçao}")
+    break
+
+   elif opçao == 2:
+    numero1 = float(input("qual é o primeiro valor? "))
+    numero2 = float(input("qual é o segundo valor? "))
+    resultado_subtraçao = calculadora('subtraçao', numero1, numero2)
+    print(f"O resultado da subtração é: {resultado_subtraçao}")
+    break 
+
+   elif opçao == 3:
+    numero1 = float(input("qual é o primeiro valor? "))
+    numero2 = float(input("qual é o segundo valor? "))
+    resultado_multiplicaçao = calculadora('multiplicaçao', numero1, numero2)
+    print(f'O resultado da multiplicaçã é: {resultado_multiplicaçao}')
+    break
+
+   elif opçao == 4:
+    numero1 = float(input("qual é o primeiro valor? "))
+    numero2 = float(input("qual é o segundo valor? "))
+    resultado_divisao = calculadora('divisao', numero1, numero2)
+    print(f'O valor da divisão é: {resultado_divisao}')
+    break
+
+   else: 
+     print("opção invalida, Tente novamente")
+
+
+
+
+
+
+
+
+
